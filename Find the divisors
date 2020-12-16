@@ -1,0 +1,17 @@
+Create a function named divisors/Divisors that takes an integer n > 1 and returns an array with all of the integer's divisors(except for 1 and the number itself), 
+from smallest to largest. 
+If the number is prime return the string '(integer) is prime' (null in C#) (use Either String a in Haskell and Result<Vec<u32>, String> in Rust).
+
+
+
+CODE
+
+def divisors(integer):
+    div_list = []    
+    for i in range(2, integer):
+        if integer%i == 0:
+            div_list.append(i)   #appending factors to the empty list
+    if len(div_list) == 0:       # checking if list contains 0 elements i.e. prime number
+        return  str(integer) + ' is prime'
+    else:
+        return div_list
